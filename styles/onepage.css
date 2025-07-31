@@ -2001,9 +2001,9 @@ section:nth-child(even) {
     
     /* Hero adjustments */
     .hero {
-        margin-top: 120px;
-        min-height: 85vh;
-        padding-top: 60px;
+        margin-top: 150px;
+        min-height: 90vh;
+        padding-top: 80px;
         padding-bottom: 80px;
     }
     
