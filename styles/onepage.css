@@ -2029,13 +2029,17 @@ section:nth-child(even) {
     .hero-cta {
         flex-direction: column;
         align-items: center;
-        gap: var(--space-md);
+        gap: var(--space-lg);
+        width: 100%;
+        padding: 0 var(--space-lg);
     }
     
-    .btn {
+    .hero-cta .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         text-align: center;
+        display: block;
+        margin: 0 auto;
     }
     
     /* Section adjustments */
