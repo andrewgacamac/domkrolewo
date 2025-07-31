@@ -2001,9 +2001,9 @@ section:nth-child(even) {
     
     /* Hero adjustments */
     .hero {
-        margin-top: 80px;
+        margin-top: 100px;
         min-height: 80vh;
-        padding-top: 20px;
+        padding-top: 40px;
     }
     
     .hero-title {
@@ -2032,6 +2032,9 @@ section:nth-child(even) {
         gap: var(--space-lg);
         width: 100%;
         padding: 0 var(--space-lg);
+        margin-bottom: var(--space-xl);
+        position: relative;
+        z-index: 2;
     }
     
     .hero-cta .btn {
@@ -2040,6 +2043,20 @@ section:nth-child(even) {
         text-align: center;
         display: block;
         margin: 0 auto;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        border: 2px solid rgba(255,255,255,0.3);
+    }
+    
+    .hero-cta .btn-primary {
+        background-color: rgba(231, 111, 81, 0.95);
+        backdrop-filter: blur(10px);
+    }
+    
+    .hero-cta .btn-secondary {
+        background-color: rgba(255,255,255,0.9);
+        color: var(--forest-deep);
+        border: 2px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(10px);
     }
     
     /* Section adjustments */
