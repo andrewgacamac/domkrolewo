@@ -38,6 +38,10 @@
     --space-xl: 3rem;
     --space-xxl: 5rem;
     
+    /* Navigation Heights */
+    --nav-height-desktop: 80px;
+    --nav-height-mobile: 60px;
+    
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-base: 0.3s ease;
@@ -119,6 +123,9 @@ p {
     box-shadow: var(--shadow-md);
     z-index: 1000;
     transition: all var(--transition-base);
+    height: var(--nav-height-mobile);
+    display: flex;
+    align-items: center;
 }
 
 .nav-wrapper {
@@ -1999,12 +2006,28 @@ section:nth-child(even) {
         display: flex;
     }
     
-    /* Hero adjustments */
+    /* Modern hero adjustments for mobile */
     .hero {
-        margin-top: 150px;
-        min-height: 90vh;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height */
+        min-height: 100vh;
+        margin-top: 0;
+        padding-top: calc(var(--nav-height-mobile) + 2rem);
+        padding-bottom: 2rem;
+        display: grid;
+        place-items: center;
+        grid-template-rows: 1fr auto 1fr;
+    }
+    
+    .hero-content {
+        grid-row: 2;
+        width: 100%;
+        max-width: none;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
     
     .hero-title {
@@ -2144,4 +2167,33 @@ section {
 
 section {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Desktop improvements */
+@media (min-width: 769px) {
+    :root {
+        --nav-height-mobile: var(--nav-height-desktop);
+    }
+    
+    .main-nav {
+        height: var(--nav-height-desktop);
+        padding: var(--space-md) 0;
+    }
+    
+    .hero {
+        height: 100vh;
+        margin-top: 0;
+        padding-top: calc(var(--nav-height-desktop) + 1rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-template-rows: unset;
+    }
+    
+    .hero-content {
+        max-width: 900px;
+        padding: 0 2rem;
+        grid-row: unset;
+        gap: 2rem;
+    }
 }
