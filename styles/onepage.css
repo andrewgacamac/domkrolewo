@@ -2000,6 +2000,8 @@ section:nth-child(even) {
     
     .nav-menu a:last-child {
         border-bottom: none;
+        margin-bottom: var(--space-lg);
+        padding-bottom: var(--space-lg);
     }
     
     .mobile-menu-toggle {
